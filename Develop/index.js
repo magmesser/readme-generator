@@ -22,6 +22,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "What is your GitHub repository name? (Include hyphens as needed. No spaces allowed.)",
+    name: "repo",
+  },
+  {
+    type: "input",
     message: "What is the title of your project?",
     name: "title",
   },

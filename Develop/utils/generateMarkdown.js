@@ -90,7 +90,8 @@ function generateMarkdown(data) {
   🎢 ${data.usage}
 
   ## Contribution 
-  🚧 ${data.contribution}
+  🚧 [Contributor Covenant](https://www.contributor-covenant.org/) <br> 
+  ${data.contribution}
 
   ## Tests
   📝 ${data.tests}
@@ -100,8 +101,10 @@ function generateMarkdown(data) {
 
   ## Questions
   ❓ Have questions? Please contact ${data.author} at: <br>
-  ${data.github}'s GitHub: https://github.com/${data.github} <br> 
-  or ${data.author}'s Email: ${data.email}.
+  * ${data.github}'s GitHub: https://github.com/${data.github} <br> 
+  * ${data.author}'s Email: ${data.email} <br>
+  
+  ❗ Repository Link: https://github.com/${data.github}/${data.repo}
 `;
 }
 
