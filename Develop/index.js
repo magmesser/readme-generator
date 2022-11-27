@@ -5,7 +5,7 @@ const fs = require("fs");
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
+        {
         type: 'input',
         message: 'What is your name?',
         name: 'author',
@@ -54,16 +54,13 @@ const questions = [
         type: 'list',
         message: 'Please select a License:',
         name: 'license',
-        choices: ['MIT', 'ISC', 'MPL', 'GPL', 'AGPL']
+        choices: ['MIT', 'ISC', 'MPL', 'GPL', 'AGPL', 'None']
     }
 ];
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) { 
-    // let fileName = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
     inquirer
     .prompt(questions)
-    // .then(generateMarkdown(data))
     .then((data) =>
 {
     fs.writeFile("READMEresults.md", generateMarkdown(data), (err) =>

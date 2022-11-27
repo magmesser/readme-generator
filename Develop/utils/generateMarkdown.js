@@ -1,27 +1,59 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  ['MIT' `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`, 
-  'ISC' `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`, 
-  'MPL' `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`, 
-  'GPL' `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`, 
-  'AGPL' `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)` ]
-}
+  switch (license) {
+    case "MIT":
+      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      break;
+    case "ISC":
+      return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
+      break;
+    case "MPL":
+      return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`;
+      break;
+    case "GPL":
+      return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+      break;
+    case "AGPL":
+      return `[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)`;
+      break;
+    case "None":
+      return "";
+      break;
+  };
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  ['MIT', 
-  'ISC', 
-  'MPL', 
-  'GPL', 
-  'AGPL']
+  switch (license) {
+    case "MIT":
+      return "https://choosealicense.com/licenses/mit/";
+      break;
+    case "ISC":
+      return "https://choosealicense.com/licenses/isc/";
+      break;
+    case "MPL":
+      return "https://choosealicense.com/licenses/mpl-2.0/";
+      break;
+    case "GPL":
+      return "https://choosealicense.com/licenses/gpl-3.0/";
+      break;
+    case "AGPL":
+      return "https://choosealicense.com/licenses/agpl-3.0/";
+      break;
+    case "None":
+      return "";
+      break;
+  };
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
+function renderLicenseSection(license) {
+  renderLicenseBadge();
+  renderLicenseLink();
+}
 
 /* README Contents -- 
 Title: title of the project 
@@ -36,8 +68,11 @@ Questions: GitHub username and profile link; email address with instructions on 
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseSection();
   return `
   # ${data.title}
+
+  ${data.licenseBadge}
 
   ## Description
   🔮 ${data.description} 
