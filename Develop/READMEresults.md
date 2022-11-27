@@ -2,10 +2,10 @@
   # Demo of README Generator
 
   ## Badges
-  
+  [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
   ## Description
-  🔮 This is a demo of the README generator app 
+  🔮 This is a demo of the README generator application 
 
   ## 📚 Table of Contents
   * [🔧 Installation](#installation)
@@ -16,10 +16,10 @@
   * [❓ Questions](#questions)
   
   ## Installation
-  🔧 NPM install inquirer
+  🔧 npm i inquirer
 
   ## Usage 
-  🎢 This is a demo
+  🎢 This application generates README.md files
 
   ## Contribution 
   🚧 [Contributor Covenant](https://www.contributor-covenant.org/) <br> 
@@ -29,11 +29,13 @@
   📝 node index.js
 
   ## License
-  🔑 This application is not covered under a license.
+  🔑 This application is covered under the AGPL license.  <br> 
+      Find out more here: https://choosealicense.com/licenses/agpl-3.0/ <br>
+      [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 
   ## Questions
-  ❓ Have questions? Please contact Demo at: <br>
+  ❓ Have questions? Please contact Demo Readme at: <br>
   * magmesser's GitHub: https://github.com/magmesser <br> 
-  * Demo's Email: demo@gmail.com <br>
+  * Demo Readme's Email: demo@gmail.com <br>
   
   ❗ Repository Link: https://github.com/magmesser/readme-generator
