@@ -1,10 +1,11 @@
 
-  # Showing Off
+  # 
 
-  undefined
+  ## Badges
+  
 
   ## Description
-  🔮 This is me demo 
+  🔮  
 
   ## 📚 Table of Contents
   * [🔧 Installation](#installation)
@@ -15,21 +16,21 @@
   * [❓ Questions](#questions)
   
   ## Installation
-  🔧 it done
+  🔧 
 
   ## Usage 
-  🎢 Demoing 
+  🎢 
 
   ## Contribution 
-  🚧 None ya
+  🚧 
 
   ## Tests
-  📝 NO!
+  📝 
 
   ## License
-  🔑 MIT
+  🔑 This application is not covered under a license
 
   ## Questions
-  ❓ Have questions? Please contact Kyle at: <br>
-  magmesser's GitHub: https://github.com/magmesser <br> 
-  or Kyle's Email: kyle@kyle.com.
+  ❓ Have questions? Please contact  at: <br>
+  's GitHub: https://github.com/ <br> 
+  or 's Email: .

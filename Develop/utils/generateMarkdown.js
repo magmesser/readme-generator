@@ -1,9 +1,8 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function to render license badge
 function renderLicenseBadge(license) {
   switch (license) {
     case "MIT":
-      return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+      return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
       break;
     case "ISC":
       return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`;
@@ -20,11 +19,10 @@ function renderLicenseBadge(license) {
     case "None":
       return "";
       break;
-  };
-};
+  }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function to render license link
 function renderLicenseLink(license) {
   switch (license) {
     case "MIT":
@@ -45,34 +43,34 @@ function renderLicenseLink(license) {
     case "None":
       return "";
       break;
-  };
+  }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function to render license section of readme.md file
 function renderLicenseSection(license) {
-  renderLicenseBadge();
-  renderLicenseLink();
+  switch (license) {
+    case "MIT":
+    case "ISC":
+    case "MPL":
+    case "GPL":
+    case "AGPL":
+      return `This application is covered under the ${license} license.  <br> 
+      Find out more here: ${renderLicenseLink(license)} <br>
+      ${renderLicenseBadge(license)}`;
+      break;
+    case "None":
+      return `This application is not covered under a license.`;
+      break;
+  }
 }
 
-/* README Contents -- 
-Title: title of the project 
-Description: description of the project 
-Table of Contents: table of contents of ReadMe with links to sections of ReadMe file
-Installation: installation instructions  
-Usage: usage information 
-License: license information 
-Contributing: contribution guidelines
-Tests: test instructions 
-Questions: GitHub username and profile link; email address with instructions on how to reach me */
-
-// TODO: Create a function to generate markdown for README
+// Function to generate readme.md file
 function generateMarkdown(data) {
-  renderLicenseSection();
   return `
   # ${data.title}
 
-  ${data.licenseBadge}
+  ## Badges
+  ${renderLicenseBadge(data.license)}
 
   ## Description
   🔮 ${data.description} 
@@ -98,7 +96,7 @@ function generateMarkdown(data) {
   📝 ${data.tests}
 
   ## License
-  🔑 ${data.license}
+  🔑 ${renderLicenseSection(data.license)}
 
   ## Questions
   ❓ Have questions? Please contact ${data.author} at: <br>
@@ -107,4 +105,5 @@ function generateMarkdown(data) {
 `;
 }
 
+// Exporting generateMarkdown to index.js file
 module.exports = generateMarkdown;
