@@ -21,7 +21,7 @@
   ## Usage 
   🎢 Run the application through the terminal, answer the questions by entering text or selecting from a list, complete and the README file will be generated!
 
-  Video Walkthrough: [Click Here](https://watch.screencastify.com/v/Jg2iFKRoVe179tfkLMIg)
+  Video Walkthrough: [Click Here](https://drive.google.com/file/d/1P2kbY9kYwl8JAaYMBOzR4uj419HAYY5c/view)
 
   ## Contribution 
   🚧 [Contributor Covenant](https://www.contributor-covenant.org/) <br> 
